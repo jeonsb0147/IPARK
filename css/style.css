@@ -681,8 +681,8 @@ a {
   /*---------------con01---------------*/
   #con01 {
     width: 90%;
-    height: 100vh;
-    margin: 0px auto;
+    /* height: 100vh; */
+    margin: 0px auto 50px;
     display: flex;
     flex-direction: column;
   }
@@ -698,6 +698,7 @@ a {
   }
 
   #con01 .right {
+    text-align: center;
     width: 100%;
     height: 30%;
   }
@@ -847,7 +848,7 @@ a {
   }
 
   #con03 .left-bottom div {
-    padding: 100px 30px 0px 0px;
+    padding: 50px 30px 0px 0px;
   }
 
   #con03 .left-bottom img {
@@ -959,12 +960,15 @@ a {
   }
 
   #con05 .top h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   #con05 h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 10px 0px;
+  }
+  #con05 p {
+    font-size: 13px;
   }
 
   .top > ul {
@@ -987,7 +991,7 @@ a {
   /*------------con06-------------*/
   #con06 {
     width: 90%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 20px auto 0px;
     padding: 150px 0px 70px;
     text-align: center;
@@ -999,7 +1003,7 @@ a {
   }
 
   #con06 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #23336c;
     letter-spacing: 2px;
     margin: 10px 0px 40px;
@@ -1046,6 +1050,7 @@ a {
   #con06 .map-btn li:nth-of-type(2) a {
     background-color: #23336c;
   }
+
   /*----------------footer-----------------*/
   footer {
     width: 90%;
@@ -1053,6 +1058,7 @@ a {
     background-color: #000;
     color: #fff;
     /* display: flex; */
+    /* align-items: center; */
     padding: 30px 30px 70px;
     text-align: center;
   }
@@ -1062,20 +1068,20 @@ a {
   }
 
   footer span {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     color: #aaa;
   }
 
   footer ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex;
+    align-items: center; */
   }
 
   footer ul:nth-of-type(1) {
-    /* display: flex;
-    justify-content: space-between; */
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   footer ul:nth-of-type(1) span {
@@ -1084,48 +1090,37 @@ a {
   }
 
   footer ul:nth-of-type(1) li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  footer ul:nth-of-type(1) li:nth-of-type(1) {
     font-size: 10px;
-    width: calc((100% / 2) - 50px);
   }
 
   footer ul:nth-of-type(1) li img {
-    width: 60%;
+    width: 40%;
     display: inline-block;
-  }
-
-  footer ul:nth-of-type(1) li {
-    display: flex;
-    align-items: center;
-    gap: 5px;
   }
 
   footer ul:nth-of-type(2) li:nth-of-type(1) {
     padding-right: 10px;
     position: relative;
-    font-size: 10px;
   }
 
-  footer ul:nth-of-type(2) li:nth-of-type(1)::after {
-    content: "";
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 12px;
-    background-color: #aaa;
-  }
-
-  footer ul:nth-of-type(2) li:nth-of-type(2) {
-    padding-left: 10px;
-    font-size: 10px;
+  footer ul:nth-of-type(2) {
+    font-size: 13px;
+    margin-bottom: 20px;
   }
 
   footer .left div {
     margin: 5px 0px 30px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; */
   }
 
   footer .left div span:nth-of-type(1) {
@@ -1133,7 +1128,7 @@ a {
     position: relative;
   }
 
-  footer .left div span:nth-of-type(1)::after {
+  /* footer .left div span:nth-of-type(1)::after {
     content: "";
     position: absolute;
     left: 100%;
@@ -1142,7 +1137,7 @@ a {
     width: 1px;
     height: 10px;
     background-color: #aaa;
-  }
+  } */
 
   footer .right {
     width: 100%;
@@ -1151,26 +1146,27 @@ a {
 
   footer .right ul {
     width: 100%;
-    margin: 10px 0px;
   }
 
   footer .right ul li {
-    width: calc(100% / 2);
-    display: flex;
-    justify-content: center;
-    font-size: 10px;
+    width: 100%;
+    margin-top: 20px;
   }
 
   footer .right ul li:nth-of-type(2) a {
-    padding: 10px 10px;
-    font-size: 0.7rem;
+    padding: 10px 50px;
     border: 1px solid #fff;
   }
 
   footer span {
     display: block;
   }
+
+  footer .right span {
+    display: none;
+  }
 }
+
 @media (min-width: 769px) and (max-width: 1399px) {
   /*------------header--------------*/
   header {
@@ -1194,7 +1190,7 @@ a {
   }
 
   header h1 img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -1205,13 +1201,13 @@ a {
   }
 
   header ul:nth-of-type(1) li {
-    padding: 0px 20px;
-    font-size: 1rem;
+    padding: 0px 15px;
+    font-size: 13px;
     color: #fff;
   }
 
   header ul:nth-of-type(2) {
-    display: flex;
+    display: none;
   }
 
   header ul:nth-of-type(2) li:nth-of-type(1) {
@@ -1252,11 +1248,12 @@ a {
     top: 20%;
     left: 70px;
   }
+
   /*---------------container---------------*/
   /*---------------con01---------------*/
   #con01 {
     width: 95%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0px auto;
     display: flex;
     gap: 20px;
@@ -1278,25 +1275,25 @@ a {
   }
 
   #con01 .right h3 {
-    font-size: 2rem;
-    margin-bottom: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
   }
 
   #con01 .right p {
-    font-size: 1.2rem;
+    font-size: 13px;
   }
 
   #con01 .right .r-wrap {
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 50px;
     transform: translateY(-50%);
   }
 
   /*---------------con02---------------*/
   #con02 {
     width: 95%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0px auto;
     display: flex;
     align-items: center;
@@ -1306,7 +1303,13 @@ a {
 
   #con02 .left {
     width: 65%;
-    height: 100%;
+    /* height: 100%; */
+    text-align: center;
+    padding: 50px 0px;
+  }
+
+  #con02 .left .top {
+    margin-bottom: 50px;
   }
 
   #con02 .left h3,
@@ -1315,30 +1318,25 @@ a {
   }
 
   #con02 .center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
-
-  #con02 .center .line {
-    border-top: 1px solid #aaa;
-    width: 550px;
+    text-align: center;
   }
 
   #con02 .bottom {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   }
 
   #con02 .bottom ul {
     display: flex;
+    justify-content: center;
     gap: 10px;
   }
 
   #con02 .bottom .b-right {
-    text-align: right;
+    margin-top: 50px;
+    text-align: center;
   }
 
   #con02 .right {
@@ -1354,8 +1352,9 @@ a {
   }
 
   #con02 .left p {
-    font-size: 0.7rem;
+    font-size: 13px;
   }
+
   /*---------------con03---------------*/
   #con03 {
     width: 95px;
@@ -1403,7 +1402,7 @@ a {
 
   #con03 h4 {
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
   }
 
@@ -1422,7 +1421,9 @@ a {
     height: 100%;
     object-fit: cover;
   }
-
+  #con03 .left-bottom p {
+    font-size: 13px;
+  }
   #con03 .right {
     width: 100%;
     height: 100%;
@@ -1435,6 +1436,9 @@ a {
     width: 50%;
     height: 65%;
   }
+  #con03 .right p {
+    font-size: 13px;
+  }
 
   #con03 .right li:nth-of-type(2) {
     padding-left: 30px;
@@ -1443,7 +1447,7 @@ a {
   #con03 .right li:nth-of-type(2) div {
     width: 100%;
     height: 100%;
-    transform: translateY(80%);
+    transform: translateY(50%);
   }
 
   #con03 .right li:nth-of-type(3) {
@@ -1486,8 +1490,11 @@ a {
 
   #con04 h4 {
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
+  }
+  #con04 p {
+    font-size: 13px;
   }
 
   #con04 span {
@@ -1512,6 +1519,7 @@ a {
     text-align: right;
     padding: 30px 30px 0px 0px;
   }
+
   /*----------------con05----------------*/
   #con05 {
     width: 95%;
@@ -1623,19 +1631,21 @@ a {
   #con06 .map-btn li:nth-of-type(2) a {
     background-color: #23336c;
   }
+
   /*----------------footer-----------------*/
   footer {
     width: 95%;
     margin: 0px auto;
     background-color: #000;
     color: #fff;
-    display: flex;
+    /* display: flex; */
     /* align-items: center; */
     padding: 30px 30px 70px;
+    text-align: center;
   }
 
   footer .left {
-    width: 50%;
+    width: 100%;
   }
 
   footer span {
@@ -1644,12 +1654,15 @@ a {
   }
 
   footer ul {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
   }
 
   footer ul:nth-of-type(1) {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   footer ul:nth-of-type(1) span {
@@ -1658,7 +1671,11 @@ a {
   }
 
   footer ul:nth-of-type(1) li {
-    width: calc((100% / 2) - 50px);
+    width: calc(100% / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
   }
 
   footer ul:nth-of-type(1) li img {
@@ -1666,35 +1683,19 @@ a {
     display: inline-block;
   }
 
-  footer ul:nth-of-type(1) li {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
   footer ul:nth-of-type(2) li:nth-of-type(1) {
     padding-right: 10px;
     position: relative;
   }
 
-  footer ul:nth-of-type(2) li:nth-of-type(1)::after {
-    content: "";
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 12px;
-    background-color: #aaa;
-  }
-
-  footer ul:nth-of-type(2) li:nth-of-type(2) {
-    padding-left: 10px;
+  footer ul:nth-of-type(2) {
+    margin-bottom: 20px;
   }
 
   footer .left div {
     margin: 5px 0px 30px;
     display: flex;
+    justify-content: center;
     gap: 10px;
   }
 
@@ -1715,8 +1716,8 @@ a {
   }
 
   footer .right {
-    width: 50%;
-    text-align: right;
+    width: 100%;
+    text-align: center;
   }
 
   footer .right ul {
@@ -1726,7 +1727,8 @@ a {
   footer .right ul li {
     width: calc(100% / 2);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   footer .right ul li:nth-of-type(2) a {
